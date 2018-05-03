@@ -8,11 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		A65EEC63209941210039325C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC62209941210039325C /* AppDelegate.swift */; };
-		A65EEC65209941210039325C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC64209941210039325C /* ViewController.swift */; };
+		A65EEC65209941210039325C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC64209941210039325C /* LoginViewController.swift */; };
 		A65EEC68209941210039325C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65EEC66209941210039325C /* Main.storyboard */; };
 		A65EEC6A209941230039325C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65EEC69209941230039325C /* Assets.xcassets */; };
 		A65EEC6D209941230039325C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A65EEC6B209941230039325C /* LaunchScreen.storyboard */; };
 		A65EEC78209941230039325C /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC77209941230039325C /* OnTheMapTests.swift */; };
+		A65EEC8420994CC30039325C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC8320994CC30039325C /* Constants.swift */; };
+		A65EEC88209A07D60039325C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC87209A07D60039325C /* NetworkManager.swift */; };
+		A65EEC8B209A28AF0039325C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC8A209A28AF0039325C /* MapViewController.swift */; };
+		A65EEC8E209A28DB0039325C /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC8D209A28DB0039325C /* ListTableViewController.swift */; };
+		A65EEC91209A29680039325C /* OnTheMapTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC90209A29680039325C /* OnTheMapTabViewController.swift */; };
+		A65EEC93209A3CE50039325C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC92209A3CE50039325C /* DataStore.swift */; };
+		A65EEC95209A55A10039325C /* NetworkManagerConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC94209A55A10039325C /* NetworkManagerConvenience.swift */; };
+		A65EEC97209A59090039325C /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC96209A59090039325C /* StudentInformation.swift */; };
+		A69BDF3B209B96CE00B7B1FB /* StudentAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BDF3A209B96CE00B7B1FB /* StudentAnnotation.swift */; };
+		A69BDF3D209B9EFB00B7B1FB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A69BDF3C209B9EFB00B7B1FB /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +38,7 @@
 /* Begin PBXFileReference section */
 		A65EEC5F209941210039325C /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65EEC62209941210039325C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A65EEC64209941210039325C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A65EEC64209941210039325C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A65EEC67209941210039325C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A65EEC69209941230039325C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A65EEC6C209941230039325C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +46,16 @@
 		A65EEC73209941230039325C /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65EEC77209941230039325C /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
 		A65EEC79209941230039325C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65EEC8320994CC30039325C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A65EEC87209A07D60039325C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A65EEC8A209A28AF0039325C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A65EEC8D209A28DB0039325C /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		A65EEC90209A29680039325C /* OnTheMapTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTabViewController.swift; sourceTree = "<group>"; };
+		A65EEC92209A3CE50039325C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		A65EEC94209A55A10039325C /* NetworkManagerConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerConvenience.swift; sourceTree = "<group>"; };
+		A65EEC96209A59090039325C /* StudentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		A69BDF3A209B96CE00B7B1FB /* StudentAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAnnotation.swift; sourceTree = "<group>"; };
+		A69BDF3C209B9EFB00B7B1FB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +79,7 @@
 		A65EEC56209941210039325C = {
 			isa = PBXGroup;
 			children = (
+				A69BDF3C209B9EFB00B7B1FB /* .gitignore */,
 				A65EEC61209941210039325C /* OnTheMap */,
 				A65EEC76209941230039325C /* OnTheMapTests */,
 				A65EEC60209941210039325C /* Products */,
@@ -77,8 +98,14 @@
 		A65EEC61209941210039325C /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
+				A65EEC8320994CC30039325C /* Constants.swift */,
+				A65EEC82209942EA0039325C /* Login */,
+				A65EEC8C209A28B70039325C /* List */,
+				A65EEC89209A28650039325C /* Map */,
+				A65EEC86209A07B80039325C /* Managers */,
+				A65EEC85209A073B0039325C /* Models */,
+				A65EEC8F209A29310039325C /* Tabbar */,
 				A65EEC62209941210039325C /* AppDelegate.swift */,
-				A65EEC64209941210039325C /* ViewController.swift */,
 				A65EEC66209941210039325C /* Main.storyboard */,
 				A65EEC69209941230039325C /* Assets.xcassets */,
 				A65EEC6B209941230039325C /* LaunchScreen.storyboard */,
@@ -94,6 +121,57 @@
 				A65EEC79209941230039325C /* Info.plist */,
 			);
 			path = OnTheMapTests;
+			sourceTree = "<group>";
+		};
+		A65EEC82209942EA0039325C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A65EEC64209941210039325C /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A65EEC85209A073B0039325C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A65EEC92209A3CE50039325C /* DataStore.swift */,
+				A65EEC96209A59090039325C /* StudentInformation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A65EEC86209A07B80039325C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A65EEC87209A07D60039325C /* NetworkManager.swift */,
+				A65EEC94209A55A10039325C /* NetworkManagerConvenience.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A65EEC89209A28650039325C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				A65EEC8A209A28AF0039325C /* MapViewController.swift */,
+				A69BDF3A209B96CE00B7B1FB /* StudentAnnotation.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		A65EEC8C209A28B70039325C /* List */ = {
+			isa = PBXGroup;
+			children = (
+				A65EEC8D209A28DB0039325C /* ListTableViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		A65EEC8F209A29310039325C /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				A65EEC90209A29680039325C /* OnTheMapTabViewController.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69BDF3D209B9EFB00B7B1FB /* .gitignore in Resources */,
 				A65EEC6D209941230039325C /* LaunchScreen.storyboard in Resources */,
 				A65EEC6A209941230039325C /* Assets.xcassets in Resources */,
 				A65EEC68209941210039325C /* Main.storyboard in Resources */,
@@ -197,8 +276,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A65EEC65209941210039325C /* ViewController.swift in Sources */,
+				A65EEC88209A07D60039325C /* NetworkManager.swift in Sources */,
+				A69BDF3B209B96CE00B7B1FB /* StudentAnnotation.swift in Sources */,
+				A65EEC93209A3CE50039325C /* DataStore.swift in Sources */,
+				A65EEC65209941210039325C /* LoginViewController.swift in Sources */,
+				A65EEC8420994CC30039325C /* Constants.swift in Sources */,
+				A65EEC95209A55A10039325C /* NetworkManagerConvenience.swift in Sources */,
+				A65EEC8E209A28DB0039325C /* ListTableViewController.swift in Sources */,
+				A65EEC8B209A28AF0039325C /* MapViewController.swift in Sources */,
 				A65EEC63209941210039325C /* AppDelegate.swift in Sources */,
+				A65EEC97209A59090039325C /* StudentInformation.swift in Sources */,
+				A65EEC91209A29680039325C /* OnTheMapTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +446,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -366,6 +455,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftentusiast.OnTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -375,7 +465,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -383,6 +474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftentusiast.OnTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
