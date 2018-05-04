@@ -20,4 +20,14 @@ class StudentAnnotation: NSObject, MKAnnotation {
         self.coordinate = coordinate
         super.init()
     }
+    
+    var title: String? {
+        return studentName
+    }
+    
+    var subtitle: String? {
+        return urlString
+    }
+    
+    
 }

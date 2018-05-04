@@ -36,7 +36,6 @@ extension NetworkManager {
                         completionHandlerForStudentInformtion(students,nil)
                     } catch {
                         print(error)
-//                        completionHandlerForStudentInformtion(nil,error as NSError)
                     }
                 }
             }

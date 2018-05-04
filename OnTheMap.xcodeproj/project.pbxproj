@@ -16,13 +16,14 @@
 		A65EEC8420994CC30039325C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC8320994CC30039325C /* Constants.swift */; };
 		A65EEC88209A07D60039325C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC87209A07D60039325C /* NetworkManager.swift */; };
 		A65EEC8B209A28AF0039325C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC8A209A28AF0039325C /* MapViewController.swift */; };
-		A65EEC8E209A28DB0039325C /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC8D209A28DB0039325C /* ListTableViewController.swift */; };
+		A65EEC8E209A28DB0039325C /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC8D209A28DB0039325C /* StudentTableViewController.swift */; };
 		A65EEC91209A29680039325C /* OnTheMapTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC90209A29680039325C /* OnTheMapTabViewController.swift */; };
 		A65EEC93209A3CE50039325C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC92209A3CE50039325C /* DataStore.swift */; };
 		A65EEC95209A55A10039325C /* NetworkManagerConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC94209A55A10039325C /* NetworkManagerConvenience.swift */; };
 		A65EEC97209A59090039325C /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65EEC96209A59090039325C /* StudentInformation.swift */; };
 		A69BDF3B209B96CE00B7B1FB /* StudentAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BDF3A209B96CE00B7B1FB /* StudentAnnotation.swift */; };
 		A69BDF3D209B9EFB00B7B1FB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A69BDF3C209B9EFB00B7B1FB /* .gitignore */; };
+		A69BDF3F209BE0ED00B7B1FB /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BDF3E209BE0ED00B7B1FB /* StudentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +50,14 @@
 		A65EEC8320994CC30039325C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A65EEC87209A07D60039325C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A65EEC8A209A28AF0039325C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		A65EEC8D209A28DB0039325C /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		A65EEC8D209A28DB0039325C /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 		A65EEC90209A29680039325C /* OnTheMapTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTabViewController.swift; sourceTree = "<group>"; };
 		A65EEC92209A3CE50039325C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		A65EEC94209A55A10039325C /* NetworkManagerConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerConvenience.swift; sourceTree = "<group>"; };
 		A65EEC96209A59090039325C /* StudentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
 		A69BDF3A209B96CE00B7B1FB /* StudentAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAnnotation.swift; sourceTree = "<group>"; };
 		A69BDF3C209B9EFB00B7B1FB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A69BDF3E209BE0ED00B7B1FB /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,7 @@
 			children = (
 				A65EEC8320994CC30039325C /* Constants.swift */,
 				A65EEC82209942EA0039325C /* Login */,
-				A65EEC8C209A28B70039325C /* List */,
+				A65EEC8C209A28B70039325C /* StudentTable */,
 				A65EEC89209A28650039325C /* Map */,
 				A65EEC86209A07B80039325C /* Managers */,
 				A65EEC85209A073B0039325C /* Models */,
@@ -158,12 +160,13 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
-		A65EEC8C209A28B70039325C /* List */ = {
+		A65EEC8C209A28B70039325C /* StudentTable */ = {
 			isa = PBXGroup;
 			children = (
-				A65EEC8D209A28DB0039325C /* ListTableViewController.swift */,
+				A65EEC8D209A28DB0039325C /* StudentTableViewController.swift */,
+				A69BDF3E209BE0ED00B7B1FB /* StudentTableViewCell.swift */,
 			);
-			path = List;
+			path = StudentTable;
 			sourceTree = "<group>";
 		};
 		A65EEC8F209A29310039325C /* Tabbar */ = {
@@ -282,11 +285,12 @@
 				A65EEC65209941210039325C /* LoginViewController.swift in Sources */,
 				A65EEC8420994CC30039325C /* Constants.swift in Sources */,
 				A65EEC95209A55A10039325C /* NetworkManagerConvenience.swift in Sources */,
-				A65EEC8E209A28DB0039325C /* ListTableViewController.swift in Sources */,
+				A65EEC8E209A28DB0039325C /* StudentTableViewController.swift in Sources */,
 				A65EEC8B209A28AF0039325C /* MapViewController.swift in Sources */,
 				A65EEC63209941210039325C /* AppDelegate.swift in Sources */,
 				A65EEC97209A59090039325C /* StudentInformation.swift in Sources */,
 				A65EEC91209A29680039325C /* OnTheMapTabViewController.swift in Sources */,
+				A69BDF3F209BE0ED00B7B1FB /* StudentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

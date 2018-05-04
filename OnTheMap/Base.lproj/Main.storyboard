@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -196,22 +198,57 @@
             </objects>
             <point key="canvasLocation" x="1676" y="29"/>
         </scene>
-        <!--List Table View Controller-->
+        <!--Student Table View Controller-->
         <scene sceneID="CEk-MN-c7R">
             <objects>
-                <tableViewController storyboardIdentifier="ListTableViewController" id="HEG-wh-dJf" customClass="ListTableViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListTableViewController" id="HEG-wh-dJf" customClass="StudentTableViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lg2-mh-9Iz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VV9-Bq-HSs">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentTableViewCell" rowHeight="81" id="VV9-Bq-HSs" customClass="StudentTableViewCell" customModule="OnTheMap" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VV9-Bq-HSs" id="UTx-Sq-azI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pin" translatesAutoresizingMaskIntoConstraints="NO" id="CXu-8h-BVz">
+                                            <rect key="frame" x="10" y="15.5" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="Mab-CV-1k1"/>
+                                                <constraint firstAttribute="width" secondItem="CXu-8h-BVz" secondAttribute="height" multiplier="1:1" id="RGE-rB-Lys"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOg-XB-mvc">
+                                            <rect key="frame" x="70" y="11" width="289" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-kR-23r">
+                                            <rect key="frame" x="70" y="46" width="289" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cOg-XB-mvc" firstAttribute="top" secondItem="UTx-Sq-azI" secondAttribute="topMargin" id="0DJ-np-ikt"/>
+                                        <constraint firstItem="cOg-XB-mvc" firstAttribute="leading" secondItem="CXu-8h-BVz" secondAttribute="trailing" constant="10" id="8UM-H6-yqD"/>
+                                        <constraint firstItem="vV3-kR-23r" firstAttribute="trailing" secondItem="UTx-Sq-azI" secondAttribute="trailingMargin" id="Hfb-pV-kws"/>
+                                        <constraint firstItem="CXu-8h-BVz" firstAttribute="centerY" secondItem="UTx-Sq-azI" secondAttribute="centerY" id="UIH-cX-xcW"/>
+                                        <constraint firstItem="vV3-kR-23r" firstAttribute="top" secondItem="cOg-XB-mvc" secondAttribute="bottom" constant="15" id="fSm-yF-HiE"/>
+                                        <constraint firstItem="CXu-8h-BVz" firstAttribute="leading" secondItem="UTx-Sq-azI" secondAttribute="leading" constant="10" id="jDh-SE-SK8"/>
+                                        <constraint firstItem="vV3-kR-23r" firstAttribute="leading" secondItem="cOg-XB-mvc" secondAttribute="leading" id="lAz-18-ycl"/>
+                                        <constraint firstItem="cOg-XB-mvc" firstAttribute="trailing" secondItem="UTx-Sq-azI" secondAttribute="trailingMargin" id="tEb-eu-AxS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblFullName" destination="cOg-XB-mvc" id="ykW-cw-Dde"/>
+                                    <outlet property="lblURLString" destination="vV3-kR-23r" id="4xQ-On-EcK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -223,12 +260,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQ5-x3-1wt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2633" y="439"/>
+            <point key="canvasLocation" x="2632.8000000000002" y="438.53073463268368"/>
         </scene>
     </scenes>
     <resources>
         <image name="icon_listview-deselected" width="75" height="50"/>
         <image name="icon_mapview-selected" width="75" height="50"/>
+        <image name="icon_pin" width="24" height="24"/>
         <image name="logo-u" width="62" height="62"/>
     </resources>
 </document>
