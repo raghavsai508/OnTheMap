@@ -68,46 +68,6 @@ class NetworkManager: NSObject {
         
     }
     
-//    // MARK: POST
-//    func taskForPOSTMethod(_ pathExtension: String, parameters: [String:AnyObject], jsonBody: String, completionHandlerForPOST: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) {
-//        
-//        let url = urlFromParameters(parameters, withPathExtension: pathExtension)
-//        print(url)
-//        let request = NSMutableURLRequest(url: url)
-//        request.httpMethod = "POST"
-//        request.addValue("application/json", forHTTPHeaderField: "Accept")
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.httpBody = jsonBody.data(using: String.Encoding.utf8)
-//        
-//        let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
-//            
-//            func sendError(_ error: String) {
-//                print(error)
-//                let userInfo = [NSLocalizedDescriptionKey : error]
-//                completionHandlerForPOST(nil, NSError(domain: "taskForPOSTMethod", code: 1, userInfo: userInfo))
-//            }
-//            
-//            /* GUARD: Was there an error? */
-//            guard (error == nil) else {
-//                sendError("There was an error with your request: \(error!)")
-//                return
-//            }
-//            
-//            /* GUARD: Was there any data returned? */
-//            guard let data = data else {
-//                sendError("No data was returned by the request!")
-//                return
-//            }
-//            
-//            // Parse the data and use the data (happens in completion handler) s
-//            self.convertDataWithCompletionHandler(data, completionHandlerForConvertData: completionHandlerForPOST)
-//        }
-//        
-//        /* 7. Start the request */
-//        task.resume()
-//    }
-    
-    
     // MARK: Helpers
     private func convertDataWithCompletionHandler(_ data: Data,apiType: APIType, completionHandlerForConvertData: (_ result: AnyObject?, _ error: NSError?) -> Void) {
         

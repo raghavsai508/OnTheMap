@@ -59,18 +59,9 @@ class StudentTableViewController: UITableViewController {
     // MARK: Table View Delegate Methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let studentInfo = studentsArray[indexPath.row]
-        if verifyURL(urlString: studentInfo.mediaURL) {
+        if NetworkManager.verifyURL(urlString: studentInfo.mediaURL) {
             UIApplication.shared.open(URL(string: studentInfo.mediaURL)!, options: [:], completionHandler: nil)
         }
     }
-    
-    //MARK: Helper methods
-    private func verifyURL(urlString: String?) -> Bool {
-        if let urlString = urlString, let url = URL(string: urlString) {
-            return UIApplication.shared.canOpenURL(url)
-        }
-        return false
-    }
-    
-    
+        
 }

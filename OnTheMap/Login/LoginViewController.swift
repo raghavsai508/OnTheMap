@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     //MARK: Actions
     @IBAction func btnLoginAction(_ sender: Any) {
         if txtEmail.text!.isEmpty || txtPassword.text!.isEmpty {
-            showAlert(withMessage: "Email or Password is missing")
+            showAlert(message: "Email or Password is missing", title: "")
         } else {
             let networkManager = NetworkManager.sharedInstance()
             networkManager.loginWith(username: txtEmail.text!, password: txtPassword.text!) { (success, errorMessage) in
@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
                     if success {
                         self.successfulLogin()
                     } else {
-                        self.showAlert(withMessage: errorMessage!)
+                        self.showAlert(message: errorMessage!, title: "")
                     }
                 }
             }
@@ -53,16 +53,6 @@ class LoginViewController: UIViewController {
             self.present(navigationController, animated: true, completion: nil)
         }
     }
-    
-    //MARK: Utility methods
-    private func showAlert(withMessage message: String) {
-        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
-  
-
 }
 
 // MARK: - LoginViewController: UITextFieldDelegate
@@ -85,8 +75,5 @@ extension LoginViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
     }
-    
-
-
 }
 

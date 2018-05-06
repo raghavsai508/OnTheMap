@@ -45,6 +45,9 @@ class OnTheMapTabViewController: UITabBarController {
     }
     
     @IBAction func btnAddLocationAction(_ sender: Any) {
+        if let navigationController = storyboard?.instantiateViewController(withIdentifier: "AddMapNavController") as? UINavigationController {
+            self.present(navigationController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func btnRefreshAction(_ sender: Any) {

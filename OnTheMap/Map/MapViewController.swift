@@ -21,8 +21,8 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.mapView.delegate = self
-        self.registerForNotifications()
+        mapView.delegate = self
+        registerForNotifications()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -55,16 +55,6 @@ class MapViewController: UIViewController {
             }
         }
     }
-    
-    
-    //MARK: Internal Utility Methods
-    internal func showAlert(withMessage message: String) {
-        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
-
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -93,20 +83,11 @@ extension MapViewController: MKMapViewDelegate {
     private func openURLForAnnotationView(view: MKAnnotationView) {
         if view.annotation is StudentAnnotation,
             let annotation = view.annotation as? StudentAnnotation,
-            verifyURL(urlString: annotation.urlString) {
+            NetworkManager.verifyURL(urlString: annotation.urlString) {
             UIApplication.shared.open(URL(string: annotation.urlString!)!, options: [:], completionHandler: nil)
         } else {
-            showAlert(withMessage: "Invalid URL")
+            showAlert(message: "Invalid URL", title: "")
         }
     }
-    
-    
-    private func verifyURL(urlString: String?) -> Bool {
-        if let urlString = urlString, let url = URL(string: urlString) {
-            return UIApplication.shared.canOpenURL(url)
-        }
-        return false
-    }
-    
-    
+
 }
