@@ -104,31 +104,6 @@ class OnTheMapTabViewController: UITabBarController {
         }
     }
     
-//    private func addLoadingImageFor(viewController: UIViewController) {
-//        let loadingImageView = UIImageView(image: UIImage(named: "loading"))
-//        loadingImageView.tag = 99
-//        loadingImageView.translatesAutoresizingMaskIntoConstraints = false
-//        viewController.view.addSubview(loadingImageView)
-//        viewController.view.bringSubview(toFront: loadingImageView)
-//        let views = ["loading": loadingImageView, "view": viewController.view] as [String: Any]
-//        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:[view]-(<=0)-[loading(50)]", options: NSLayoutFormatOptions.alignAllCenterY , metrics: nil, views: views)
-//        let verticalConstraints  = NSLayoutConstraint.constraints(withVisualFormat: "V:[view]-(<=0)-[loading(50)]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views)
-//        NSLayoutConstraint.activate(horizontalConstraints)
-//        NSLayoutConstraint.activate(verticalConstraints)
-//    }
-//
-//    private func removeLoadingImageFor(viewController: UIViewController) {
-//        let subViews = viewController.view.subviews
-//        for view in subViews {
-//            if view is UIImageView && view.tag == 99 {
-//                view.removeFromSuperview()
-//            }
-//        }
-//    }
-    
-    
-    
-    
     //MARK: Utility Methods
     private func showOverwriteAlert(userName: String) {
         let message = "User \"\(userName)\" Has Already Posted a Student Location. Would You Like to Overwrite Their Location?"

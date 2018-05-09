@@ -83,37 +83,6 @@ extension NetworkManager {
         }
     }
     
-//    func postStudentLocation(latitude: Double,longitude: Double, _ completionHandlerForPostStudentLocation: @escaping (_ success: Bool, _ error: NSError?) -> Void) {
-//        
-//        let components = getParseURLComponents()
-//        
-//        var request = URLRequest(url: components.url!)
-//        request.httpMethod = "POST"
-//        request.addValue(Constants.Parse.ParseAppID, forHTTPHeaderField: "X-Parse-Application-Id")
-//        request.addValue(Constants.Parse.RestApiKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        
-//        let studentInfo = DataStore.sharedInstance().currentStudent
-//        
-//        let jsonBody = "{\"\(Constants.Parse.ParseKeys.ParseUniqueKey)\": \"\(studentInfo!.uniqueKey)\", \"\(Constants.Parse.ParseKeys.ParseFirstNameKey)\": \"\(studentInfo!.firstName)\", \"\(Constants.Parse.ParseKeys.ParseLastNameKey)\": \"\(studentInfo!.lastName)\",\"\(Constants.Parse.ParseKeys.ParseMapStringKey)\": \"\(studentInfo!.mapString)\", \"\(Constants.Parse.ParseKeys.ParseMediaURLKey)\": \"\(studentInfo!.mediaURL)\",\"\(Constants.Parse.ParseKeys.ParseLatitudeKey)\": \(latitude), \"\(Constants.Parse.ParseKeys.ParseLongitudeKey)\": \(longitude)}"
-//        
-//        request.httpBody = jsonBody.data(using: .utf8)
-//        
-//        taskForURLRequest(request, apiType: .apiParse) { (dataObject, error) in
-//            if error != nil {
-//                completionHandlerForPostStudentLocation(false, error!)
-//            } else {
-//                if let _ = dataObject?["objectId"] {
-//                    completionHandlerForPostStudentLocation(true, nil)
-//                } else {
-//                    let userInfo = [NSLocalizedDescriptionKey : "Could not POST student location: '\(String(describing: dataObject))'"]
-//                    completionHandlerForPostStudentLocation(false, NSError(domain: "postStudentLocation", code: 0, userInfo: userInfo))
-//                }
-//            }
-//        }
-//
-//    }
-    
     func updateStudentLocation(method: String,latitude: Double,longitude: Double, mediaURL: String,_ completionHandlerForPostStudentLocation: @escaping (_ success: Bool, _ error: NSError?) -> Void) -> URLSessionDataTask? {
         
         let studentInfo = DataStore.sharedInstance().currentStudent
