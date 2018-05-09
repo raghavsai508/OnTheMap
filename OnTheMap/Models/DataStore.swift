@@ -11,7 +11,10 @@ import Foundation
 class DataStore: NSObject {
     // MARK: Public Properties
     private(set) var sessionID: String = ""
+    private(set) var accountID: String = ""
     private(set) var students: [StudentInformation]?
+    private(set) var currentStudent: StudentInformation?
+    private(set) var overwriteStudentLocation: Bool = false
     
     // MARK: Initializers
     
@@ -33,13 +36,25 @@ class DataStore: NSObject {
     }
     
     func logoutSession() {
-        self.sessionID = ""
+        sessionID = ""
         //Make Service Call for logging out to remove session id
+    }
+    
+    func loginAccountID(accountID: String) {
+        self.accountID = accountID
     }
     
     // Students Store 
     func storeStudents(studentsData: [StudentInformation]) {
         self.students = studentsData
+    }
+    
+    func storeCurrentStudent(currentStudent: StudentInformation) {
+        self.currentStudent = currentStudent
+    }
+    
+    func updateOverwriteStudentLocation(overwriteStudentLocation: Bool) {
+        self.overwriteStudentLocation = overwriteStudentLocation
     }
     
     

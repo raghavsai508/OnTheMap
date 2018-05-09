@@ -35,13 +35,33 @@ struct Constants {
         // MARK: URLs
         static let APIScheme = "https"
         static let APIHost = "parse.udacity.com"
-    }
-    
-    
-    struct ParseMethods {
-        //MARK: StudentLocation
-        static let StudentLocation = "/parse/classes/StudentLocation"
         
+        struct ParseKeys {
+            static let ParseWhereKey = "where"
+            static let ParseUniqueKey = "uniqueKey"
+            static let ParseFirstNameKey = "firstName"
+            static let ParseLastNameKey =  "lastName"
+            static let ParseMapStringKey = "mapString"
+            static let ParseMediaURLKey = "mediaURL"
+            static let ParseLatitudeKey = "latitude"
+            static let ParseLongitudeKey = "longitude"
+            static let ParseLimitKey = "limit"
+            static let ParseOrderKey = "order"
+        }
+        
+        struct ParseValues {
+            static let ParseLimitValue = "100"
+            static let ParseDescendingOrderValue = "-updatedAt"
+        }
+        
+        
+        struct ParseMethods {
+            //MARK: StudentLocation
+            static let StudentLocation = "/parse/classes/StudentLocation"
+            
+        }
     }
+    
+    
     
 }

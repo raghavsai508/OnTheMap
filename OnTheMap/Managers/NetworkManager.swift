@@ -36,7 +36,7 @@ class NetworkManager: NSObject {
     
     
     //MARK: URLRequest
-    func taskForURLRequest(_ urlRequest: URLRequest,apiType: APIType, completionHandlerForRequest: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) {
+    func taskForURLRequest(_ urlRequest: URLRequest,apiType: APIType, completionHandlerForRequest: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask? {
         
         let task = session.dataTask(with: urlRequest as URLRequest) { (data, response, error) in
             
@@ -66,6 +66,7 @@ class NetworkManager: NSObject {
         /* Start the request */
         task.resume()
         
+        return task
     }
     
     // MARK: Helpers

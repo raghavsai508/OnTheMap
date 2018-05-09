@@ -112,7 +112,6 @@
 		A65EEC61209941210039325C /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				A657727B209E9C6E006DF033 /* Utility */,
 				A65EEC8320994CC30039325C /* Constants.swift */,
 				A65EEC82209942EA0039325C /* Login */,
 				A65EEC89209A28650039325C /* Map */,
@@ -121,6 +120,7 @@
 				A6CF2477209CDA7A003EB58C /* PostingView */,
 				A65EEC8C209A28B70039325C /* StudentTable */,
 				A65EEC8F209A29310039325C /* Tabbar */,
+				A657727B209E9C6E006DF033 /* Utility */,
 				A65EEC62209941210039325C /* AppDelegate.swift */,
 				A65EEC66209941210039325C /* Main.storyboard */,
 				A65EEC69209941230039325C /* Assets.xcassets */,
