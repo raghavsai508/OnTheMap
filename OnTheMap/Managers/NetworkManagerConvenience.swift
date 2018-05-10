@@ -40,6 +40,14 @@ extension NetworkManager {
                         // NO need to set it completion Handler
                         print(error)
                     }
+                } else {
+                    var errorString = ""
+                    if let errorValue = dataObject?["error"] as? String {
+                        errorString = errorValue
+                    }
+                    
+                    let userInfo = [NSLocalizedDescriptionKey : "Could not retreive users location: \(errorString)"]
+                    completionHandlerForStudentInformtion(nil,NSError(domain: "getStudentsInformation", code: 0, userInfo: userInfo))
                 }
             }
         }
@@ -76,6 +84,7 @@ extension NetworkManager {
                         print(error)
                     }
                 } else{
+                    
                     let userInfo = [NSLocalizedDescriptionKey : "Could not parse the data as JSON: '\(String(describing: dataObject))'"]
                     completionHandlerForCurrentStudent(nil,NSError(domain: "getCurrentStundentInformation", code: 0, userInfo: userInfo))
                 }
@@ -102,8 +111,12 @@ extension NetworkManager {
         request.addValue(Constants.Parse.RestApiKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
+        let uniqueKey = studentInfo?.uniqueKey ?? ""
+        let firstName = studentInfo?.firstName ?? ""
+        let lastName = studentInfo?.lastName ?? ""
+        let mapString = studentInfo?.mapString ?? ""
         
-        let jsonBody = "{\"\(Constants.Parse.ParseKeys.ParseUniqueKey)\": \"\(studentInfo!.uniqueKey)\", \"\(Constants.Parse.ParseKeys.ParseFirstNameKey)\": \"\(studentInfo!.firstName)\", \"\(Constants.Parse.ParseKeys.ParseLastNameKey)\": \"\(studentInfo!.lastName)\",\"\(Constants.Parse.ParseKeys.ParseMapStringKey)\": \"\(studentInfo!.mapString)\", \"\(Constants.Parse.ParseKeys.ParseMediaURLKey)\": \"\(mediaURL)\",\"\(Constants.Parse.ParseKeys.ParseLatitudeKey)\": \(latitude), \"\(Constants.Parse.ParseKeys.ParseLongitudeKey)\": \(longitude)}"
+        let jsonBody = "{\"\(Constants.Parse.ParseKeys.ParseUniqueKey)\": \"\(uniqueKey)\", \"\(Constants.Parse.ParseKeys.ParseFirstNameKey)\": \"\(firstName)\", \"\(Constants.Parse.ParseKeys.ParseLastNameKey)\": \"\(lastName)\",\"\(Constants.Parse.ParseKeys.ParseMapStringKey)\": \"\(mapString)\", \"\(Constants.Parse.ParseKeys.ParseMediaURLKey)\": \"\(mediaURL)\",\"\(Constants.Parse.ParseKeys.ParseLatitudeKey)\": \(latitude), \"\(Constants.Parse.ParseKeys.ParseLongitudeKey)\": \(longitude)}"
         
         request.httpBody = jsonBody.data(using: .utf8)
         
@@ -111,10 +124,15 @@ extension NetworkManager {
             if error != nil {
                 completionHandlerForPostStudentLocation(false, error!)
             } else {
-                if let _ = dataObject?["objectId"] {
+                if  dataObject?["objectId"] != nil || dataObject?["updatedAt"] != nil {
                     completionHandlerForPostStudentLocation(true, nil)
                 } else {
-                    let userInfo = [NSLocalizedDescriptionKey : "Could not POST student location: '\(String(describing: dataObject))'"]
+                    var errorString = ""
+                    if let errorValue = dataObject?["error"] as? String {
+                        errorString = errorValue
+                    }
+                    
+                    let userInfo = [NSLocalizedDescriptionKey : "Could not update student location: '\(errorString)'"]
                     completionHandlerForPostStudentLocation(false, NSError(domain: "postStudentLocation", code: 0, userInfo: userInfo))
                 }
             }

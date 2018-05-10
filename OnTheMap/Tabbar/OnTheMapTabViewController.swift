@@ -50,6 +50,8 @@ class OnTheMapTabViewController: UITabBarController {
                 if error == nil {
                     DataStore.sharedInstance().storeStudents(studentsData: studentsInformation!)
                     NotificationCenter.default.post(name: Notification.Name(Constants.NotificationConstants.KStudentsRefreshNotification), object: nil)
+                } else {
+                    self.showAlert(message: "", title: error!.localizedDescription)
                 }
             }
         }
